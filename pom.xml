@@ -120,6 +120,17 @@
 			<version>4.7</version>
 			<scope>test</scope>
 		</dependency>
+	       <dependency>
+   			 <groupId>org.apache.struts</groupId>
+    			<artifactId>struts2-core</artifactId>
+    			<version>${struts2.version}</version>
+   			 <exclusions>
+        			<exclusion>
+           	 		<artifactId>tools</artifactId>
+            			<groupId>com.sun</groupId>
+        			</exclusion>
+    			</exclusions>
+		</dependency>
 
 
 		<!-- COMMONS -->
@@ -427,12 +438,6 @@
                                 <format>xml</format>
                             </formats>
                         </configuration>
-			    <exclusions>
-            <exclusion>
-                <artifactId>tools</artifactId>
-                <groupId>com.sun</groupId>
-            </exclusion>
-        </exclusions>
                     </plugin>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
